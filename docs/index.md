@@ -49,22 +49,23 @@ run.py → script para rodar o projeto, chamando core.
 
 
 ⚙️ Funções do script
+
 ✅ criar_estrutura()
+
 O que faz?
 
 Cria todas as pastas e arquivos da lista ESTRUTURA.
-
 Insere conteúdo base (se tiver) conforme CONTEUDOS.
 
 Como?
 
 Verifica se o caminho termina com / → cria pasta.
-
 Senão → cria arquivo com o conteúdo definido.
 
 🧠 Insight: Automatiza o esqueleto do projeto!
 
 ✅ inicializar_git()
+
 O que faz?
 
 Executa:
@@ -76,36 +77,37 @@ git add . → adiciona todos os arquivos.
 git commit → cria commit inicial.
 
 Como?
+
 Usa subprocess.run para rodar comandos nativos do Git.
 
 ✅ criar_venv()
+
 O que faz?
 
 Cria ambiente virtual Python (venv/).
+
 Como?
 
-Executa:
+Executa: python -m venv venv
 
-bash
-Copiar
-Editar
-python -m venv venv
 🧠 Por quê?
+
 Isola as dependências do projeto, evita conflito com outros projetos.
 
 ✅ ativar_venv_cmd()
+
 O que faz?
 
 Sugere o comando certo para ativar o venv de acordo com o sistema operacional:
-
 Windows → venv\Scripts\activate
-
 Unix → source venv/bin/activate
 
 💡 Observação:
+
 Não dá para ativar venv dentro de um script. Só pode sugerir para o usuário.
 
 ✅ instalar_dependencias()
+
 O que faz?
 
 Instala todas as dependências listadas no requirements.txt.
@@ -116,14 +118,12 @@ Detecta se é Windows ou Unix.
 
 Usa o pip do ambiente virtual:
 
-bash
-Copiar
-Editar
 pip install -r requirements.txt
+
 🔥 Fluxo principal (__main__)
+
 python
-Copiar
-Editar
+
 if __name__ == "__main__":
     criar_estrutura()
     inicializar_git()
@@ -138,16 +138,12 @@ if __name__ == "__main__":
     print("    make install    # para instalar dependências")
     print("    make test       # para rodar testes")
     print("    make run        # para executar o projeto\n")
+
 Cria estrutura
-
 Inicializa Git
-
 Cria venv
-
 Instala dependências
-
 Sugere como ativar venv
-
 Mostra comandos make úteis
 
 🎯 Resumo Visual:
@@ -182,9 +178,7 @@ Editar
 ✅ Documentado
 
 🗺️ Fluxograma do Script de Estruturação de Projeto Python
-plaintext
-Copiar
-Editar
+
 [Início]
    |
    v
@@ -210,6 +204,7 @@ Editar
    |
    v
 [Fim: Estrutura completa criada!]
+
 🎨 Explicação das Etapas:
 ✅ criar_estrutura()
 ➡️ Cria todas as pastas e arquivos conforme ESTRUTURA e CONTEUDOS.
@@ -240,7 +235,5 @@ Como ativar o venv
 Como usar make para rodar o projeto, instalar ou testar.
 
 💥 Fluxo rápido:
-nginx
-Copiar
-Editar
+
 Criar Estrutura → Inicializar Git → Criar venv → Instalar dependências → Sugerir ativação → Exibir
