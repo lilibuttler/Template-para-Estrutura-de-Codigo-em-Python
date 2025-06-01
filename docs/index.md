@@ -147,6 +147,7 @@ Sugere como ativar venv
 Mostra comandos make úteis
 
 🎯 Resumo Visual:
+
 arduino
 Copiar
 Editar
@@ -170,7 +171,9 @@ Editar
 ├── Makefile
 ├── LICENSE
 └── venv/
+
 🚀 Resumo ultra-rápido:
+
 ✅ Automatiza tudo
 ✅ Cria ambiente isolado
 ✅ Deixa pronto para versionar
